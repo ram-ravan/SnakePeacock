@@ -4,6 +4,7 @@
 
 Game::Game(std::size_t grid_width, std::size_t grid_height, float startSpeed)
     : snake(grid_width, grid_height, startSpeed),
+      peacock(grid_width, grid_height),
       engine(dev()),
       random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1)),
@@ -26,7 +27,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, snake);
     Update();
-    renderer.Render(snake, food);
+    renderer.Render(snake, food, peacock);
 
     frame_end = SDL_GetTicks();
 
@@ -40,6 +41,8 @@ void Game::Run(Controller const &controller, Renderer &renderer,
       renderer.UpdateWindowTitle(score, frame_count);
       frame_count = 0;
       title_timestamp = frame_end;
+      // Task 3
+      peacock.Update(title_timestamp, food);
     }
 
     // If the time for this frame is too small (i.e. frame_duration is
@@ -58,7 +61,7 @@ void Game::PlaceFood() {
     y = random_h(engine);
     // Check that the location is not occupied by a snake item before placing
     // food.
-    if (!snake.SnakeCell(x, y)) {
+    if (!snake.SnakeCell(x, y) && !peacock.PeacockCell(x, y)) {
       food.x = x;
       food.y = y;
       return;
@@ -85,6 +88,14 @@ void Game::Update() {
     PlaceFood();
     snake.GrowBody();
     snake.speed += 0.02;
+  }
+
+    // If the snake is in the same cells as the peacock, then the snake is killed by the peacock
+  snake.alive = !(peacock.PeacockCell(new_x, new_y)); //Task 3
+
+  for (auto const &item : snake.body) {
+    if(peacock.PeacockCell(item.x, item.y))
+      snake.alive = false;
   }
 }
 

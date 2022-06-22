@@ -11,15 +11,17 @@ This is my Capstone project in the [Udacity C++ Nanodegree Program](https://www.
   5. Included anaconda (or a python snake) to the game and allowed the computer to control it using **A* search algorithm**
 
 ## Task 1
+
+Objective
+
 1. Created scoreCard.h and scoreCard.cpp with necessary data structures and its attributes, methods, constructors, destructors etc.
 2. In the main(), an object of type scoreCard is created to invoke the constructor of Struct scoreCard
 3. Read/Write to file operations are implemented to sort score and display top scores etc.
 
 Input(s) - player name
 
-
-
 ## Task 2
+
 1. Created startSpeed.h and startSpeed.cpp with necessary data structures and its attributes, methods, constructors, destructors etc.
 2. In the main(), an object of type startSpeed is created to invoke the constructor of Struct startSpeed
 1. Changed score type from int to float
@@ -28,11 +30,25 @@ Input(s) - player name
 5. Renderer::UpdateWindowTitle(..) arguments list modified and sstream library is used to display float with a score value of single precision.
 
 Input(s) - User's choice of speed
-<img src="snake_game.gif"/>
+
+## Task 3
+
+1. New header file and source file created for peacock which is a moving obstacle in the game
+2. Peacock class contains different attributes and methods to control the behaviour of peacock in the game
+2. A new peacock instance is created in Game class and peacock constructor receives the grid width and grid height attributes from game class
+2. Peacock moves one grid per second to one of eight directions possible in its surrounding
+2. This movement of peacock is done by calling Peacock::Update(...) from game loop once in a second
+3. Game::Update() is updated such that snake gets killed when its head or body touches the peacock in the game
+3. Renderer::Render(...) method now has Peacock instance in its arguments list
+3. Renderer::RenderPeacock(...) method receives Peacock's instance from Renderer::Render() to render it to the screen as an image using SDL_RenderCopy(...)
+
+Input(s) - None
 
 <!-- The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
 
 In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features. -->
+
+<img src="snake_game.gif"/>
 
 ## Dependencies for Running Locally
 * cmake >= 3.7

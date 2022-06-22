@@ -204,6 +204,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/peacock.o: src/peacock.cpp.o
+
+.PHONY : src/peacock.o
+
+# target to build an object file
+src/peacock.cpp.o:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/peacock.cpp.o
+.PHONY : src/peacock.cpp.o
+
+src/peacock.i: src/peacock.cpp.i
+
+.PHONY : src/peacock.i
+
+# target to preprocess a source file
+src/peacock.cpp.i:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/peacock.cpp.i
+.PHONY : src/peacock.cpp.i
+
+src/peacock.s: src/peacock.cpp.s
+
+.PHONY : src/peacock.s
+
+# target to generate assembly for a file
+src/peacock.cpp.s:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/peacock.cpp.s
+.PHONY : src/peacock.cpp.s
+
 src/renderer.o: src/renderer.cpp.o
 
 .PHONY : src/renderer.o
@@ -330,6 +357,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/peacock.o"
+	@echo "... src/peacock.i"
+	@echo "... src/peacock.s"
 	@echo "... src/renderer.o"
 	@echo "... src/renderer.i"
 	@echo "... src/renderer.s"
