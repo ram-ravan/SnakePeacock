@@ -13,7 +13,7 @@
 // Task 3
 #include "SDL_image.h" 
 
-#define PATH "../src/images/peacock_withoutBG_l.png"   // Licensed images from https://www.shutterstock.com | User ID: 333340777 | 500 × 441 pixels 2 × 2 in·300 DPI
+#define PATH "../images/peacock_withoutBG_l.png"   // Licensed images from https://www.shutterstock.com | User ID: 333340777 | 500 × 441 pixels 2 × 2 in·300 DPI
 
 class Renderer {
  public:
