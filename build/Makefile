@@ -285,6 +285,33 @@ src/snake.cpp.s:
 	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/snake.cpp.s
 .PHONY : src/snake.cpp.s
 
+src/startSpeed.o: src/startSpeed.cpp.o
+
+.PHONY : src/startSpeed.o
+
+# target to build an object file
+src/startSpeed.cpp.o:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/startSpeed.cpp.o
+.PHONY : src/startSpeed.cpp.o
+
+src/startSpeed.i: src/startSpeed.cpp.i
+
+.PHONY : src/startSpeed.i
+
+# target to preprocess a source file
+src/startSpeed.cpp.i:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/startSpeed.cpp.i
+.PHONY : src/startSpeed.cpp.i
+
+src/startSpeed.s: src/startSpeed.cpp.s
+
+.PHONY : src/startSpeed.s
+
+# target to generate assembly for a file
+src/startSpeed.cpp.s:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/startSpeed.cpp.s
+.PHONY : src/startSpeed.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -312,6 +339,9 @@ help:
 	@echo "... src/snake.o"
 	@echo "... src/snake.i"
 	@echo "... src/snake.s"
+	@echo "... src/startSpeed.o"
+	@echo "... src/startSpeed.i"
+	@echo "... src/startSpeed.s"
 .PHONY : help
 
 

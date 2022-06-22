@@ -2,11 +2,12 @@
 #include <iostream>
 #include "SDL.h"
 
-Game::Game(std::size_t grid_width, std::size_t grid_height)
-    : snake(grid_width, grid_height),
+Game::Game(std::size_t grid_width, std::size_t grid_height, float startSpeed)
+    : snake(grid_width, grid_height, startSpeed),
       engine(dev()),
       random_w(0, static_cast<int>(grid_width - 1)),
-      random_h(0, static_cast<int>(grid_height - 1)) {
+      random_h(0, static_cast<int>(grid_height - 1)),
+      initSpeed(startSpeed) {
   PlaceFood();
 }
 
@@ -75,13 +76,17 @@ void Game::Update() {
 
   // Check if there's food over here
   if (food.x == new_x && food.y == new_y) {
-    score++;
+    if (initSpeed == 0.05f)
+      score += 0.5;
+    else if (initSpeed == 0.1f)
+      score++;
+    else if (initSpeed == 0.4f)
+      score += 2;
     PlaceFood();
-    // Grow snake and increase speed.
     snake.GrowBody();
     snake.speed += 0.02;
   }
 }
 
-int Game::GetScore() const { return score; }
+float Game::GetScore() const { return score; }
 int Game::GetSize() const { return snake.size; }

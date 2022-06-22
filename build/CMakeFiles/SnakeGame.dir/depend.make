@@ -107,6 +107,7 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/SnakeGame.dir/src/main.cpp.o: ../src/renderer.h
 CMakeFiles/SnakeGame.dir/src/main.cpp.o: ../src/scoreCard.h
 CMakeFiles/SnakeGame.dir/src/main.cpp.o: ../src/snake.h
+CMakeFiles/SnakeGame.dir/src/main.cpp.o: ../src/startSpeed.h
 CMakeFiles/SnakeGame.dir/src/main.cpp.o: /usr/include/SDL2/SDL.h
 CMakeFiles/SnakeGame.dir/src/main.cpp.o: /usr/include/SDL2/SDL_assert.h
 CMakeFiles/SnakeGame.dir/src/main.cpp.o: /usr/include/SDL2/SDL_atomic.h
@@ -252,4 +253,7 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /usr/include/SDL2/SDL_version.h
 CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /usr/include/SDL2/SDL_video.h
 CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /usr/include/SDL2/close_code.h
+
+CMakeFiles/SnakeGame.dir/src/startSpeed.cpp.o: ../src/startSpeed.cpp
+CMakeFiles/SnakeGame.dir/src/startSpeed.cpp.o: ../src/startSpeed.h
 

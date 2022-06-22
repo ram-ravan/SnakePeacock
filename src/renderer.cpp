@@ -75,7 +75,11 @@ void Renderer::Render(Snake const snake, SDL_Point const &food) {
   SDL_RenderPresent(sdl_renderer);
 }
 
-void Renderer::UpdateWindowTitle(int score, int fps) {
-  std::string title{"Snake Score: " + std::to_string(score) + " FPS: " + std::to_string(fps)};
+void Renderer::UpdateWindowTitle(float score, int fps) {
+  // std::string title;
+  std::stringstream stream;
+  stream << std::fixed << std::setprecision(1) << score;
+  std::string preciseScore = stream.str();
+  std::string title{"Snake Score: " + preciseScore + " FPS: " + std::to_string(fps)};
   SDL_SetWindowTitle(sdl_window, title.c_str());
 }

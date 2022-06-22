@@ -28,5 +28,10 @@
   "directory": "/home/ram/cpp_portfolio/SnakePeacock++/build",
   "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/include/SDL2 -I/home/ram/cpp_portfolio/SnakePeacock++/src  -g   -std=c++17 -std=gnu++17 -o CMakeFiles/SnakeGame.dir/src/scoreCard.cpp.o -c /home/ram/cpp_portfolio/SnakePeacock++/src/scoreCard.cpp",
   "file": "/home/ram/cpp_portfolio/SnakePeacock++/src/scoreCard.cpp"
+},
+{
+  "directory": "/home/ram/cpp_portfolio/SnakePeacock++/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/include/SDL2 -I/home/ram/cpp_portfolio/SnakePeacock++/src  -g   -std=c++17 -std=gnu++17 -o CMakeFiles/SnakeGame.dir/src/startSpeed.cpp.o -c /home/ram/cpp_portfolio/SnakePeacock++/src/startSpeed.cpp",
+  "file": "/home/ram/cpp_portfolio/SnakePeacock++/src/startSpeed.cpp"
 }
 ]
