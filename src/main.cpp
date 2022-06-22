@@ -2,6 +2,7 @@
 #include "controller.h"
 #include "game.h"
 #include "renderer.h"
+#include "scoreCard.h"
 
 int main() {
   constexpr std::size_t kFramesPerSecond{60};
@@ -11,12 +12,15 @@ int main() {
   constexpr std::size_t kGridWidth{32};
   constexpr std::size_t kGridHeight{32};
 
+  // Task 1 
+  ScoreCard table;
+
   Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
   Controller controller;
   Game game(kGridWidth, kGridHeight);
   game.Run(controller, renderer, kMsPerFrame);
   std::cout << "Game has terminated successfully!\n";
-  std::cout << "Score: " << game.GetScore() << "\n";
-  std::cout << "Size: " << game.GetSize() << "\n";
+  // std::cout << "Score: " << game.GetScore() << "\n";
+  table.WriteScoreToFile(game.GetScore());
   return 0;
 }

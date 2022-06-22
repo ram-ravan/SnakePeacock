@@ -1,0 +1,3 @@
+/home/ram/cpp_portfolio/SnakePeacock++/build/CMakeFiles/rebuild_cache.dir
+/home/ram/cpp_portfolio/SnakePeacock++/build/CMakeFiles/edit_cache.dir
+/home/ram/cpp_portfolio/SnakePeacock++/build/CMakeFiles/SnakeGame.dir

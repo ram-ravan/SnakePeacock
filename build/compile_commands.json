@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/ram/cpp_portfolio/SnakePeacock++/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/include/SDL2 -I/home/ram/cpp_portfolio/SnakePeacock++/src  -g   -std=c++17 -std=gnu++17 -o CMakeFiles/SnakeGame.dir/src/main.cpp.o -c /home/ram/cpp_portfolio/SnakePeacock++/src/main.cpp",
+  "file": "/home/ram/cpp_portfolio/SnakePeacock++/src/main.cpp"
+},
+{
+  "directory": "/home/ram/cpp_portfolio/SnakePeacock++/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/include/SDL2 -I/home/ram/cpp_portfolio/SnakePeacock++/src  -g   -std=c++17 -std=gnu++17 -o CMakeFiles/SnakeGame.dir/src/game.cpp.o -c /home/ram/cpp_portfolio/SnakePeacock++/src/game.cpp",
+  "file": "/home/ram/cpp_portfolio/SnakePeacock++/src/game.cpp"
+},
+{
+  "directory": "/home/ram/cpp_portfolio/SnakePeacock++/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/include/SDL2 -I/home/ram/cpp_portfolio/SnakePeacock++/src  -g   -std=c++17 -std=gnu++17 -o CMakeFiles/SnakeGame.dir/src/controller.cpp.o -c /home/ram/cpp_portfolio/SnakePeacock++/src/controller.cpp",
+  "file": "/home/ram/cpp_portfolio/SnakePeacock++/src/controller.cpp"
+},
+{
+  "directory": "/home/ram/cpp_portfolio/SnakePeacock++/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/include/SDL2 -I/home/ram/cpp_portfolio/SnakePeacock++/src  -g   -std=c++17 -std=gnu++17 -o CMakeFiles/SnakeGame.dir/src/renderer.cpp.o -c /home/ram/cpp_portfolio/SnakePeacock++/src/renderer.cpp",
+  "file": "/home/ram/cpp_portfolio/SnakePeacock++/src/renderer.cpp"
+},
+{
+  "directory": "/home/ram/cpp_portfolio/SnakePeacock++/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/include/SDL2 -I/home/ram/cpp_portfolio/SnakePeacock++/src  -g   -std=c++17 -std=gnu++17 -o CMakeFiles/SnakeGame.dir/src/snake.cpp.o -c /home/ram/cpp_portfolio/SnakePeacock++/src/snake.cpp",
+  "file": "/home/ram/cpp_portfolio/SnakePeacock++/src/snake.cpp"
+},
+{
+  "directory": "/home/ram/cpp_portfolio/SnakePeacock++/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/include/SDL2 -I/home/ram/cpp_portfolio/SnakePeacock++/src  -g   -std=c++17 -std=gnu++17 -o CMakeFiles/SnakeGame.dir/src/scoreCard.cpp.o -c /home/ram/cpp_portfolio/SnakePeacock++/src/scoreCard.cpp",
+  "file": "/home/ram/cpp_portfolio/SnakePeacock++/src/scoreCard.cpp"
+}
+]
