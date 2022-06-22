@@ -11,10 +11,12 @@ class Peacock
 {
 public:
 
-Peacock(std::size_t grid_width, std::size_t grid_height)
+Peacock(std::size_t grid_width, std::size_t grid_height, bool movingObstacle)
 : grid_width(grid_width),
   grid_height(grid_height),
-  startSpeed(startSpeed) {
+  startSpeed(startSpeed),
+  movingObstacle(movingObstacle) 
+  {
       do
       {
         SetPosition();
@@ -27,9 +29,10 @@ Peacock(std::size_t grid_width, std::size_t grid_height)
   Peacock(){}
 
     SDL_Rect rect_peacock;
+    bool movingObstacle;
 
     bool PeacockCell(int, int);
-    void Update(int seed, SDL_Point food); // later change to SDL_Rect
+    void Update(int seed, SDL_Rect food);
     void SetPosition();
 
 private:

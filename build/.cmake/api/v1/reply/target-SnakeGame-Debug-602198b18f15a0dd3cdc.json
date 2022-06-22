@@ -69,7 +69,8 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				8
 			]
 		}
 	],
@@ -117,7 +118,8 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				8
 			]
 		}
 	],
@@ -169,6 +171,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/peacock.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/snakeComp.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

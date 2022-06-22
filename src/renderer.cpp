@@ -43,7 +43,7 @@ Renderer::~Renderer() {
   SDL_Quit();
 }
 
-void Renderer::Render(Snake const snake, SDL_Point const &food, Peacock const peacock) {
+void Renderer::Render(Snake const snake, SDL_Rect const &food, Peacock const peacock, SnakeComp const snakeComp) {
   SDL_Rect block;
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
@@ -53,6 +53,7 @@ void Renderer::Render(Snake const snake, SDL_Point const &food, Peacock const pe
   SDL_RenderClear(sdl_renderer);
 
   // Render food
+  // RenderFood(food, snakeComp.placeFoodCount);
   SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
   block.x = food.x * block.w;
   block.y = food.y * block.h;
@@ -76,9 +77,13 @@ void Renderer::Render(Snake const snake, SDL_Point const &food, Peacock const pe
   }
   SDL_RenderFillRect(sdl_renderer, &block);
 
+if (snakeComp.playAlongComputer)
+  RenderSnakeComp(snakeComp);
+
   //Task 3
   // std::future<void> ftr = std::async(std::launch::async, &Renderer::RenderPeacock, this, peacock);
   // std::thread t(&Renderer::RenderPeacock, this, peacock);
+if (peacock.movingObstacle)
     RenderPeacock(peacock);
 
   // Update Screen
@@ -119,4 +124,70 @@ void Renderer::RenderPeacock(Peacock const &peacock) {
 
   //Copying the texture on to the window using renderer and rectangle
   SDL_RenderCopy(sdl_renderer, texture_peacock, NULL, &render_peacock);
+}
+
+void Renderer::RenderSnakeComp(SnakeComp const &snakeComp) {
+  // Render snakeComp's body
+  SDL_Rect renderSnakeComp;
+  renderSnakeComp.w = screen_width / grid_width;
+  renderSnakeComp.h = screen_height / grid_height;
+  SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0xAA, 0xAA, 0xFF);
+  for (SDL_Point const &point : snakeComp.s_body) {
+    renderSnakeComp.x = point.x * renderSnakeComp.w;
+    renderSnakeComp.y = point.y * renderSnakeComp.h;
+    SDL_RenderFillRect(sdl_renderer, &renderSnakeComp);
+  }
+
+  // Render snake's head
+  renderSnakeComp.x = static_cast<int>(snakeComp.head.x) * renderSnakeComp.w;
+  renderSnakeComp.y = static_cast<int>(snakeComp.head.y) * renderSnakeComp.h;
+  if (snakeComp.s_alive) {
+    SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0x7A, 0xFF);
+  } else {
+    SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);
+  }
+  SDL_RenderFillRect(sdl_renderer, &renderSnakeComp);
+}
+
+void Renderer::RenderFood(SDL_Rect const &food, int updateFood) {
+    // Render food
+  SDL_Rect sdl_food;
+  sdl_food.w = screen_width / grid_width;
+  sdl_food.h = screen_height / grid_height;
+
+//Task 4
+  SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF); 
+  sdl_food.x = food.x * sdl_food.w; 
+  sdl_food.y = food.y * sdl_food.h;
+  sdl_food.w = food.w * sdl_food.w;
+  sdl_food.h = food.h * sdl_food.h;
+  // SDL_RenderFillRect(sdl_renderer, &sdl_food);
+  InitFoodImages();
+  IMG_Init(IMG_INIT_PNG);
+    imageIndex =  ((int) updateFood) % foodImages.size();
+  
+  // surface_food = IMG_Load(foodImages[7]);
+  surface_food = IMG_Load(foodImages[imageIndex]);
+  texture_food = SDL_CreateTextureFromSurface(sdl_renderer, surface_food);
+  SDL_RenderCopy(sdl_renderer, texture_food, NULL, &sdl_food);
+}
+
+void Renderer::InitFoodImages() {
+  foodImages.emplace_back("../images/insect.png");     // 01
+  foodImages.emplace_back("../images/spider.png");     // 02
+  foodImages.emplace_back("../images/lizard.png");     // 03
+  foodImages.emplace_back("../images/frog.png");       // 04
+  foodImages.emplace_back("../images/rat.png");        // 05
+  foodImages.emplace_back("../images/fish.png");       // 06
+  foodImages.emplace_back("../images/apple.png");      // 07
+  foodImages.emplace_back("../images/strawberry.png"); // 08
+  foodImages.emplace_back("../images/watermelon.png"); // 09
+  foodImages.emplace_back("../images/bird.png");       // 10
+  foodImages.emplace_back("../images/rooster.png");    // 11       
+  foodImages.emplace_back("../images/duck.png");       // 12
+  foodImages.emplace_back("../images/hare.png");       // 13 
+  foodImages.emplace_back("../images/turkey.png");     // 14         
+  // foodImages.emplace_back("../images/cat.png");// (14)
+  foodImages.emplace_back("../images/cat2.png");       // 15
+  foodImages.emplace_back("../images/penguin.png");    // 16
 }

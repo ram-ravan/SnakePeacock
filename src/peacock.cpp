@@ -9,18 +9,16 @@ void Peacock::SetPosition()
   rect_peacock.y = rand() % 25;
 }
 
-bool Peacock::PeacockCell(int new_x, int new_y)
+bool Peacock::PeacockCell(int x, int y)
 {
-  for (size_t i = 0; i < rect_peacock.w; i++) {
-    for (size_t j = 0; j < rect_peacock.h; j++) {
-      if (new_x == rect_peacock.x + i && new_y == rect_peacock.y + j)
+    bool is_peacockOnFood_x = ((x >= rect_peacock.x) && (x <= rect_peacock.x + rect_peacock.w));
+    bool is_peacockOnFood_y = ((y >= rect_peacock.y) && (y <= rect_peacock.y + rect_peacock.h));
+    if (is_peacockOnFood_x && is_peacockOnFood_y)
         return true;
+    return false;
     }
-  }
-  return false;
-}
 
-void Peacock::Update(int seed, SDL_Point food) // later change to SDL_Rect
+void Peacock::Update(int seed, SDL_Rect food) // later change to SDL_Rect
 {
   //Generate random numbers between -1 to +1
   srand(seed);
@@ -28,10 +26,9 @@ void Peacock::Update(int seed, SDL_Point food) // later change to SDL_Rect
   int random_y = (rand()%3) - 1;
   int move = 0;
 
+
   if (PeacockCell(food.x, food.y))
-  {
     ++move;
-  }
 
   rect_peacock.x += random_x + move;
   rect_peacock.y += random_y + move;

@@ -12,16 +12,24 @@ This is my Capstone project in the [Udacity C++ Nanodegree Program](https://www.
 
 ## Task 1
 
-Objective
+#### Objective
 
+#### C++ Concepts involved
+
+#### Steps performed to achieve the goal of the task
 1. Created scoreCard.h and scoreCard.cpp with necessary data structures and its attributes, methods, constructors, destructors etc.
 2. In the main(), an object of type scoreCard is created to invoke the constructor of Struct scoreCard
 3. Read/Write to file operations are implemented to sort score and display top scores etc.
 
-Input(s) - player name
+User input(s) - player name
 
 ## Task 2
 
+#### Objective
+
+#### C++ Concepts involved
+
+#### Steps performed to achieve the goal of the task
 1. Created startSpeed.h and startSpeed.cpp with necessary data structures and its attributes, methods, constructors, destructors etc.
 2. In the main(), an object of type startSpeed is created to invoke the constructor of Struct startSpeed
 1. Changed score type from int to float
@@ -29,10 +37,15 @@ Input(s) - player name
 4. Snake::Snake(...) arguments list changed, attribute Snake::speed gets initialised according to user's speed choice instead of default initialisation with 0.1f
 5. Renderer::UpdateWindowTitle(..) arguments list modified and sstream library is used to display float with a score value of single precision.
 
-Input(s) - User's choice of speed
+User input(s) - User's choice of speed
 
 ## Task 3
 
+#### Objective
+
+#### C++ Concepts involved
+
+#### Steps performed to achieve the goal of the task
 1. New header file and source file created for peacock which is a moving obstacle in the game
 2. Peacock class contains different attributes and methods to control the behaviour of peacock in the game
 2. A new peacock instance is created in Game class and peacock constructor receives the grid width and grid height attributes from game class
@@ -42,7 +55,41 @@ Input(s) - User's choice of speed
 3. Renderer::Render(...) method now has Peacock instance in its arguments list
 3. Renderer::RenderPeacock(...) method receives Peacock's instance from Renderer::Render() to render it to the screen as an image using SDL_RenderCopy(...)
 
-Input(s) - None
+User input(s) - None
+
+
+
+## Task 5
+
+#### Objective
+
+#### C++ Concepts involved
+
+#### Steps performed to achieve the goal of the task
+1. New header file and source file created for an another snake that plays as computer based on user's decision
+1. New class named SnakeComp is a dervied class of Snake
+1. Functions are rewritten as per the requirements of dervied class
+1. User's choice of whether or not to play against another snake that is controlled by computer is received using playComputer() method in main() function
+1. Create an instance of class SnakeComp in Game class and use it to set the attributes of the class and to call its methods to implement its functionality
+1. A new method named Game::UpdateSnakeComp() is created to update the SnakeComp's members further calling Game::AStarSearch() (which further calls all neccessary methods to direct the SnakeComp using AStarSearch algorithm), also the name of the existing Game::Update() method is now Game::UpdateSnake()
+1. Renderer::Render(...) arguments list changed accordingly to include the instance of SnakeComp
+1. Renderer::RenderSnakeComp(...) method receives SnakeComp's instance from Renderer::Render() to render it to the screen
+
+User input(s) - None
+
+## Task 6
+
+#### Objective
+
+#### C++ Concepts involved
+
+#### Steps performed to achieve the goal of the task
+
+1. A function named UserEnvSetUp() is implemented in main.cpp file to let the user choose between playing against a computer or with peacock as a moving obstacle or have both in the game
+2. Changes in arguments list of Game::Game(...) and Peacock::Peacock(...) are made accordinglr to adopt this feature
+3. Modifications to code in one or more methods of class Game and class Renderer are made to adopt to this game feature
+
+User input(s) - User's choice of whether to play against computer or to play with a moving obstacle or have both in the game
 
 <!-- The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
 

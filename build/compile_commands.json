@@ -38,5 +38,10 @@
   "directory": "/home/ram/cpp_portfolio/SnakePeacock++/build",
   "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/include/SDL2 -I/home/ram/cpp_portfolio/SnakePeacock++/src   -pthread -g   -std=c++17 -std=gnu++17 -o CMakeFiles/SnakeGame.dir/src/peacock.cpp.o -c /home/ram/cpp_portfolio/SnakePeacock++/src/peacock.cpp",
   "file": "/home/ram/cpp_portfolio/SnakePeacock++/src/peacock.cpp"
+},
+{
+  "directory": "/home/ram/cpp_portfolio/SnakePeacock++/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/include/SDL2 -I/home/ram/cpp_portfolio/SnakePeacock++/src   -pthread -g   -std=c++17 -std=gnu++17 -o CMakeFiles/SnakeGame.dir/src/snakeComp.cpp.o -c /home/ram/cpp_portfolio/SnakePeacock++/src/snakeComp.cpp",
+  "file": "/home/ram/cpp_portfolio/SnakePeacock++/src/snakeComp.cpp"
 }
 ]

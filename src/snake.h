@@ -15,6 +15,8 @@ class Snake {
         head_y(grid_height / 2),
         speed(startSpeed) {}
 
+  Snake(){}
+
   void Update();
 
   void GrowBody();
@@ -29,13 +31,14 @@ class Snake {
   float head_y;
   std::vector<SDL_Point> body;
 
- private:
+  int grid_width;
+  int grid_height;
+
+ protected:
   void UpdateHead();
   void UpdateBody(SDL_Point &current_cell, SDL_Point &prev_cell);
 
   bool growing{false};
-  int grid_width;
-  int grid_height;
 };
 
 #endif

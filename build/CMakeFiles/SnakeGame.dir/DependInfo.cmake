@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ram/cpp_portfolio/SnakePeacock++/src/renderer.cpp" "/home/ram/cpp_portfolio/SnakePeacock++/build/CMakeFiles/SnakeGame.dir/src/renderer.cpp.o"
   "/home/ram/cpp_portfolio/SnakePeacock++/src/scoreCard.cpp" "/home/ram/cpp_portfolio/SnakePeacock++/build/CMakeFiles/SnakeGame.dir/src/scoreCard.cpp.o"
   "/home/ram/cpp_portfolio/SnakePeacock++/src/snake.cpp" "/home/ram/cpp_portfolio/SnakePeacock++/build/CMakeFiles/SnakeGame.dir/src/snake.cpp.o"
+  "/home/ram/cpp_portfolio/SnakePeacock++/src/snakeComp.cpp" "/home/ram/cpp_portfolio/SnakePeacock++/build/CMakeFiles/SnakeGame.dir/src/snakeComp.cpp.o"
   "/home/ram/cpp_portfolio/SnakePeacock++/src/startSpeed.cpp" "/home/ram/cpp_portfolio/SnakePeacock++/build/CMakeFiles/SnakeGame.dir/src/startSpeed.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
