@@ -52,6 +52,10 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
    * Apart from the major improvements and modificatins listed below for each task, there are other minor changes made to reflect the major changes that are not mentioned here
    * Scores of the snake that is controlled by computer is not stored as it is immortal and possess more power than the player
 
+## Code Structure
+
+<img src="schema.svg"/>
+
 ## Task 1
 
 #### Objective - Allow users to enter their names and save it in a text file with their scores, so that one can get the top score
