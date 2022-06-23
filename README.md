@@ -18,7 +18,7 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
   >Note that for Linux, an `apt` or `apt-get` installation is preferred to building from source. 
 * SDL2_image >= 2.0
   * Install in Linux using this command [here](https://www.oreilly.com/library/view/rust-programming-by/9781788390637/ac509577-fdbc-4f2e-b876-3536985e113c.xhtml)
-  * Details SDL_image 2.0 can be found here [here](https://www.libsdl.org/projects/SDL_image/) and
+  * Details SDL_image 2.0 can be found [here](https://www.libsdl.org/projects/SDL_image/) and
   * To adapt SDL2_image with cmake, find details [here](https://stackoverflow.com/questions/23850472/how-to-use-sdl2-and-sdl-image-with-cmake) or [here](https://trenki2.github.io/blog/2017/07/04/using-sdl2-image-with-cmake/)
 * gcc/g++ >= 5.4
   * Linux: gcc / g++ is installed by default on most Linux distros
