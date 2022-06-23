@@ -54,7 +54,7 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
 
 ## Code Structure
 
-Below is the code structure of the SnakePeacock Capstone project that shows the flow of important components in the game.
+Below is the code structure of the SnakePeacock Capstone project that shows the program flow through important components of the game.
 
 <img src="schema.svg"/>
 
