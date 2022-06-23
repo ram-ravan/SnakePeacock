@@ -172,17 +172,7 @@ void Renderer::RenderFood(SDL_Rect const &food, int updateFood) {
   // SDL_RenderFillRect(sdl_renderer, &sdl_food);
   InitFoodImages();
   IMG_Init(IMG_INIT_PNG);
-  int count = 0;
-  if (updateFood > 3) {
-    // srand(updateFood);
-    int max = foodImages.size();
-    int min = 3;
-    imageIndex = min + (rand() % static_cast<int>(max - min + 1));
-    count++;
-  }
-  else {
-    imageIndex =  updateFood % 3;
-  }
+  imageIndex = updateFood % foodImages.size();
   
   // surface_food = IMG_Load(foodImages[7]);
   surface_food = IMG_Load(foodImages[imageIndex]);
