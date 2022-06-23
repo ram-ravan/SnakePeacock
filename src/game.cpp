@@ -53,7 +53,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 
     // After every second, update the window title.
     if (frame_end - title_timestamp >= 1000) {
-      renderer.UpdateWindowTitle(score, frame_count);
+      renderer.UpdateWindowTitle(score, score1, frame_count, playAlongComputer);
       frame_count = 0;
       title_timestamp = frame_end;
       // Task 3

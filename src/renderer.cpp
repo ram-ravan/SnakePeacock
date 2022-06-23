@@ -92,14 +92,24 @@ if (peacock.movingObstacle)
     // ftr.wait();
 }
 
-void Renderer::UpdateWindowTitle(float score, int fps) {
+void Renderer::UpdateWindowTitle(float score, float score1, int fps, bool playAlongComputer) {
   // std::string title;
-  // Task 2
-  std::stringstream stream;
-  stream << std::fixed << std::setprecision(1) << score;
-  std::string preciseScore = stream.str();
-  std::string title{"Snake Score: " + preciseScore + " FPS: " + std::to_string(fps)};
-  SDL_SetWindowTitle(sdl_window, title.c_str());
+  if (playAlongComputer) {
+    std::stringstream stream, stream1;
+    stream << std::fixed << std::setprecision(1) << score;
+    stream1 << std::fixed << std::setprecision(1) << score1;
+    std::string preciseScore = stream.str();
+    std::string preciseScore1 = stream1.str();
+    std::string title{"Score PLYR: " + preciseScore + "          Score COMP: " + preciseScore1};
+    SDL_SetWindowTitle(sdl_window, title.c_str());
+  }
+  else if (!playAlongComputer) {
+    std::stringstream stream;
+    stream << std::fixed << std::setprecision(1) << score;
+    std::string preciseScore = stream.str();
+    std::string title{"Snake Score: " + preciseScore + " FPS: " + std::to_string(fps)};
+    SDL_SetWindowTitle(sdl_window, title.c_str());
+  }
 }
 
 void Renderer::RenderPeacock(Peacock const &peacock) {
@@ -164,7 +174,7 @@ void Renderer::RenderFood(SDL_Rect const &food, int updateFood) {
   // SDL_RenderFillRect(sdl_renderer, &sdl_food);
   InitFoodImages();
   IMG_Init(IMG_INIT_PNG);
-    imageIndex =  ((int) updateFood) % foodImages.size();
+    imageIndex =  updateFood % foodImages.size();
   
   // surface_food = IMG_Load(foodImages[7]);
   surface_food = IMG_Load(foodImages[imageIndex]);

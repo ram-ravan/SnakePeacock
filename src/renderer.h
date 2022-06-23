@@ -24,7 +24,7 @@ class Renderer {
   ~Renderer();
 
   void Render(Snake const snake, SDL_Rect const &food, Peacock const peacock, SnakeComp const snakeComp);
-  void UpdateWindowTitle(float score, int fps);
+  void UpdateWindowTitle(float score, float score1, int fps, bool playAlongComputer);
   void RenderPeacock(Peacock const &peacock);
   void RenderSnakeComp(SnakeComp const &SnakeComp);
   void RenderFood(SDL_Rect const &food, int);

@@ -21,7 +21,8 @@ This is my Capstone project in the [Udacity C++ Nanodegree Program](https://www.
 2. In the main(), an object of type scoreCard is created to invoke the constructor of Struct scoreCard
 3. Read/Write to file operations are implemented to sort score and display top scores etc.
 
-User input(s) - player name
+###### User input(s) - player name
+###### Expected output/behaviour
 
 ## Task 2
 
@@ -37,7 +38,8 @@ User input(s) - player name
 4. Snake::Snake(...) arguments list changed, attribute Snake::speed gets initialised according to user's speed choice instead of default initialisation with 0.1f
 5. Renderer::UpdateWindowTitle(..) arguments list modified and sstream library is used to display float with a score value of single precision.
 
-User input(s) - User's choice of speed
+###### User input(s) - User's choice of speed
+###### Expected output/behaviour
 
 ## Task 3
 
@@ -55,9 +57,19 @@ User input(s) - User's choice of speed
 3. Renderer::Render(...) method now has Peacock instance in its arguments list
 3. Renderer::RenderPeacock(...) method receives Peacock's instance from Renderer::Render() to render it to the screen as an image using SDL_RenderCopy(...)
 
-User input(s) - None
+###### User input(s) - None
+###### Expected output/behaviour
 
+## Task 4
 
+#### Objective
+
+#### C++ Concepts involved
+
+#### Steps performed to achieve the goal of the task
+
+###### User input(s) - None
+###### Expected output/behaviour
 
 ## Task 5
 
@@ -75,7 +87,8 @@ User input(s) - None
 1. Renderer::Render(...) arguments list changed accordingly to include the instance of SnakeComp
 1. Renderer::RenderSnakeComp(...) method receives SnakeComp's instance from Renderer::Render() to render it to the screen
 
-User input(s) - None
+###### User input(s) - None
+###### Expected output/behaviour
 
 ## Task 6
 
@@ -85,11 +98,18 @@ User input(s) - None
 
 #### Steps performed to achieve the goal of the task
 
-1. A function named UserEnvSetUp() is implemented in main.cpp file to let the user choose between playing against a computer or with peacock as a moving obstacle or have both in the game
+1. A function named UserEnvSetUp() is implemented in main.cpp file to let the user choose between playing against a computer or with peacock as a moving obstacle or have both in the game or to play a basic snake game
 2. Changes in arguments list of Game::Game(...) and Peacock::Peacock(...) are made accordinglr to adopt this feature
 3. Modifications to code in one or more methods of class Game and class Renderer are made to adopt to this game feature
 
-User input(s) - User's choice of whether to play against computer or to play with a moving obstacle or have both in the game
+User input(s) - User's choice of whether to 
+1. Play against computer or
+2. To play with a moving obstacle or
+3. Have both in the game or
+4. To play a basic snake game
+
+###### User input(s) - User's desired choice of game environment
+###### Expected output/behaviour
 
 <!-- The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
 
