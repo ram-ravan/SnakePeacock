@@ -19,7 +19,7 @@ int main() {
   // Task 1 - Initialise instance of scoreCard, in order to create a Score Card for the game
   ScoreCard table;
 
-  // Task 5 - Let the user choose to play against another snake that is controlled by Computer
+  // Task 6 - Let the user choose between playing against a computer or with peacock as a moving obstacle or have both in the game or to play a basic snake game
   int userEnvSetUp = UserEnvSetUp();
 
   bool playAlongComputer = ((userEnvSetUp == 1 || userEnvSetUp == 3) && userEnvSetUp != 4);
@@ -36,7 +36,7 @@ int main() {
   game.Run(controller, renderer, kMsPerFrame);
   std::cout << "Game has terminated successfully!\n";
   // std::cout << "Score: " << game.GetScore() << "\n";
-
+  
   table.WriteScoreToFile(game.GetScore());
     if (playAlongComputer)
     table.PrintComputerScore(game.GetScore1());
@@ -44,6 +44,7 @@ int main() {
   return 0;
 }
 
+// Task 6
 int UserEnvSetUp()
   {
     std::cout << "How would you like to challenge yourself? Play against computer or have a moving obstacle?" << std::endl;

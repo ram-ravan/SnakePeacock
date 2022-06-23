@@ -53,11 +53,8 @@ void Renderer::Render(Snake const snake, SDL_Rect const &food, Peacock const pea
   SDL_RenderClear(sdl_renderer);
 
   // Render food
+  // Task 4
   RenderFood(food, snakeComp.placeFoodCount);
-  // SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
-  // block.x = food.x * block.w;
-  // block.y = food.y * block.h;
-  // SDL_RenderFillRect(sdl_renderer, &block);
 
   // Render snake's body
   SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0xAA, 0x00, 0xFF);
@@ -112,6 +109,7 @@ void Renderer::UpdateWindowTitle(float score, float score1, int fps, bool playAl
   }
 }
 
+// Task 3
 void Renderer::RenderPeacock(Peacock const &peacock) {
   SDL_Rect render_peacock;
   render_peacock.w = screen_width / grid_width;
@@ -136,6 +134,7 @@ void Renderer::RenderPeacock(Peacock const &peacock) {
   SDL_RenderCopy(sdl_renderer, texture_peacock, NULL, &render_peacock);
 }
 
+// Task 5
 void Renderer::RenderSnakeComp(SnakeComp const &snakeComp) {
   // Render snakeComp's body
   SDL_Rect renderSnakeComp;
@@ -159,6 +158,7 @@ void Renderer::RenderSnakeComp(SnakeComp const &snakeComp) {
   SDL_RenderFillRect(sdl_renderer, &renderSnakeComp);
 }
 
+// Task 4
 void Renderer::RenderFood(SDL_Rect const &food, int updateFood) {
     // Render food
   SDL_Rect sdl_food;

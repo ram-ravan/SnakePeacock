@@ -36,14 +36,11 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, snake);
     futures.emplace_back(std::async(std::launch::async, &Game::UpdateSnake, this));
-    // UpdateSnake();
     renderer.Render(snake, food, peacock, snakeComp);
 
     if (playAlongComputer)
-      // UpdateSnakeComp();
       futures.emplace_back(std::async(std::launch::async, &Game::UpdateSnakeComp, this));
 
-    
     frame_end = SDL_GetTicks();
 
     // Keep track of how long each loop through the input/update/render cycle
