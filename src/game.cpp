@@ -51,7 +51,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 
     // After every second, update the window title.
     if (frame_end - title_timestamp >= 1000) {
-      renderer.UpdateWindowTitle(score, score1, frame_count, playAlongComputer);
+      renderer.UpdateWindowTitle(score, score1, frame_count, playAlongComputer, snake.speed, snakeComp.s_speed);
       frame_count = 0;
       title_timestamp = frame_end;
       // Task 3
@@ -72,7 +72,6 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 }
 
 void Game::PlaceFood() {
-  ++snakeComp.placeFoodCount;
   int x, y;
   while (true) {
     x = random_w(engine);
@@ -89,6 +88,7 @@ void Game::PlaceFood() {
     if (place_here) {
       food.x = x;
       food.y = y;
+      ++snakeComp.placeFoodCount;
       return;
     }
   }

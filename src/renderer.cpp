@@ -85,7 +85,7 @@ if (peacock.movingObstacle)
   SDL_RenderPresent(sdl_renderer);
 }
 
-void Renderer::UpdateWindowTitle(float score, float score1, int fps, bool playAlongComputer) {
+void Renderer::UpdateWindowTitle(float score, float score1, int fps, bool playAlongComputer, float snakeSpeed, float snakeCompSpeed) {
   // std::string title;
   if (playAlongComputer) {
     std::stringstream stream, stream1;
@@ -93,14 +93,15 @@ void Renderer::UpdateWindowTitle(float score, float score1, int fps, bool playAl
     stream1 << std::fixed << std::setprecision(1) << score1;
     std::string preciseScore = stream.str();
     std::string preciseScore1 = stream1.str();
-    std::string title{"Score PLYR: " + preciseScore + "          Score COMP: " + preciseScore1};
+    std::string title{"PLYR  score: " + preciseScore + " " + "speed:" + std::to_string((int)(snakeSpeed * 1000)) + "           COMP  score: " 
+    + preciseScore1 + " " + "speed:" + std::to_string((int)(snakeCompSpeed * 1000))};
     SDL_SetWindowTitle(sdl_window, title.c_str());
   }
   else if (!playAlongComputer) {
     std::stringstream stream;
     stream << std::fixed << std::setprecision(1) << score;
     std::string preciseScore = stream.str();
-    std::string title{"Snake Score: " + preciseScore + " FPS: " + std::to_string(fps)};
+    std::string title{"Snake Score: " + preciseScore + " " + "speed:" + std::to_string((int)(snakeSpeed * 1000)) + " FPS: " + std::to_string(fps)};
     SDL_SetWindowTitle(sdl_window, title.c_str());
   }
 }
@@ -173,9 +174,10 @@ void Renderer::RenderFood(SDL_Rect const &food, int updateFood) {
   IMG_Init(IMG_INIT_PNG);
   int count = 0;
   if (updateFood > 3) {
+    // srand(updateFood);
     int max = foodImages.size();
     int min = 3;
-    imageIndex = (updateFood % foodImages.size()) + 3;
+    imageIndex = min + (rand() % static_cast<int>(max - min + 1));
     count++;
   }
   else {
