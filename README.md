@@ -4,7 +4,7 @@ This is my Capstone project in the [Udacity C++ Nanodegree Program](https://www.
 
 This project builds upon the startup code of [Snake game](https://github.com/udacity/CppND-Capstone-Snake-Game) provided by Udacity [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
 
-<img src="snake_game.gif"/>
+<img src="SnakePeacock.gif"/>
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
