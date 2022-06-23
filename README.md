@@ -168,54 +168,54 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
 ## Rubric points addressed
 
 1. The project demonstrates an understanding of C++ functions and control structures
-  * main.cpp, lines 48, 54
-  * game.cpp, lines 142, 171, 186, 230, 235, 247
-  * peacock.cpp, lines 16, 30
-  * peacock.h, line 20
-  * startSpeed.cpp, lines 9, 26
-  * scoreCard.cpp, lines 16, 28, 21, 35, 41, 56, 58, 84, 102, 112
-  * scoreComp.cpp
+  * main.cpp: lines 48, 54
+  * game.cpp: lines 142, 171, 186, 230, 235, 247
+  * peacock.cpp: lines 16, 30
+  * peacock.h: line 20
+  * startSpeed.cpp: lines 9, 26
+  * scoreCard.cpp: lines 16, 28, 21, 35, 41, 56, 58, 84, 102, 112
+  * snakeComp.cpp: lines 17, 23, 50, 70, 73
 
 2. The project reads data from a file and process the data, or the program writes data to a file
-  * scoreCard.cpp, lines 9, 10, 38, 53
+  * scoreCard.cpp: lines 9, 10, 38, 53
 
 3. The project accepts user input and processes the input
-  * main.cpp, lines 62, 25, 26 
-  * scoreCard.cpp 18 
-  * startSpeed.cpp line 22
+  * main.cpp: lines 62, 25, 26 
+  * scoreCard.cpp: line 18 
+  * startSpeed.cpp: line 22
 
 4. The project uses Object Oriented Programming techniques 
-  * peacock.h, lines 10 - 44
-  * snakeComp.h, lines 12 - 57
-  * peacock.cpp, all method definitions in the file and usage of member attributes in those methods
-  * snakeComp.cpp, all method definitions in the file and usage of member attributes in those methods
+  * peacock.h: lines 10 - 44
+  * snakeComp.h: lines 12 - 57
+  * peacock.cpp: all method definitions in the file and usage of member attributes in those methods
+  * snakeComp.cpp: all method definitions in the file and usage of member attributes in those methods
 
 5. Classes use appropriate access specifiers for class members
-  * peacock.h, lines 12, 37
-  * snakeComp.h, lines 14, 50
-  * snake.h, line 37 (changed from private to protected)
+  * peacock.h: lines 12, 37
+  * snakeComp.h: lines 14, 50
+  * snake.h: line 37 (changed from private to protected)
 
 6. Class constructors utilize member initialization lists
-  * peacock.h, lines 15 - 18
-  * snakeComp.h, lines 19 - 22
-  * game.cpp, lines 9 - 10, 14 - 16
+  * peacock.h: lines 15 - 18
+  * snakeComp.h: lines 19 - 22
+  * game.cpp: lines 9 - 10, 14 - 16
 
 7. Classes abstract implementation details from their interfaces
-  * game.cpp, new methods added across different task implementations, comments across the file helps identify methods part of different tasks
-  * peacock.cpp, all method definitions in the file and usage of member attributes in those methods
-  * snakeComp.cpp, all method definitions in the file and usage of member attributes in those methods
+  * game.cpp: new methods added across different task implementations, comments across the file helps identify methods part of different tasks
+  * peacock.cpp: all method definitions in the file and usage of member attributes in those methods
+  * snakeComp.cpp: all method definitions in the file and usage of member attributes in those methods
 
 8. Classes encapsulate behavior
-  * peacock.h, contains methods and attributes related to peacock
-  * snakeComp.h, contains methods and attributes related to snakeComp
-  * game.cpp, line 161 - member attribute's state accessed via a member function
-  * startSpeed.h, lines 13, 17 - member attribute's state accessed via a member function
+  * peacock.h: contains methods and attributes related to peacock
+  * snakeComp.h: contains methods and attributes related to snakeComp
+  * game.cpp: line 161 - member attribute's state accessed via a member function
+  * startSpeed.h: lines 13, 17 - member attribute's state accessed via a member function
 
 9. The project makes use of references in function declarations
-  * renderer.h, lines 28 - 30
-  
+  * renderer.h: lines 28 - 30
+
 10. The project uses multithreading
-  * game.cpp, lines 38, 42, 135
+  * game.cpp: lines 38, 42, 135
 
 
 ## CC Attribution-ShareAlike 4.0 International
