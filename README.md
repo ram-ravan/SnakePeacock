@@ -189,6 +189,7 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
   * snakeComp.h, lines 12 - 57
   * peacock.cpp, all method definitions in the file and usage of member attributes in those methods
   * snakeComp.cpp, all method definitions in the file and usage of member attributes in those methods
+
 5. Classes use appropriate access specifiers for class members
   * peacock.h, lines 12, 37
   * snakeComp.h, lines 14, 50
@@ -198,17 +199,21 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
   * peacock.h, lines 15 - 18
   * snakeComp.h, lines 19 - 22
   * game.cpp, lines 9 - 10, 14 - 16
+
 7. Classes abstract implementation details from their interfaces
-  * game.cpp, new methods added across different task implementations
+  * game.cpp, new methods added across different task implementations, comments across the file helps identify methods part of different tasks
   * peacock.cpp, all method definitions in the file and usage of member attributes in those methods
   * snakeComp.cpp, all method definitions in the file and usage of member attributes in those methods
+
 8. Classes encapsulate behavior
   * peacock.h, contains methods and attributes related to peacock
   * snakeComp.h, contains methods and attributes related to snakeComp
   * game.cpp, line 161 - member attribute's state accessed via a member function
   * startSpeed.h, lines 13, 17 - member attribute's state accessed via a member function
+
 9. The project makes use of references in function declarations
   * renderer.h, lines 28 - 30
+  
 10. The project uses multithreading
   * game.cpp, lines 38, 42, 135
 
