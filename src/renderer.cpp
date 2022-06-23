@@ -179,16 +179,16 @@ void Renderer::RenderFood(SDL_Rect const &food, int updateFood) {
 }
 
 void Renderer::InitFoodImages() {
-  foodImages.emplace_back("../images/frog.png");        // 01
-  foodImages.emplace_back("../images/rat.png");       // 02
-  foodImages.emplace_back("../images/lizard.png");     // 03 
+  foodImages.emplace_back("../images/rat.png");        // 01
+  foodImages.emplace_back("../images/frog.png");       // 02
+  foodImages.emplace_back("../images/bird.png");     // 03 
   foodImages.emplace_back("../images/insect.png");     // 04  
-  foodImages.emplace_back("../images/spider.png");     // 05
+  foodImages.emplace_back("../images/lizard.png");     // 05
   foodImages.emplace_back("../images/fish.png");       // 06
-  foodImages.emplace_back("../images/apple.png");      // 07
+  foodImages.emplace_back("../images/spider.png");      // 07
   foodImages.emplace_back("../images/strawberry.png"); // 08
   foodImages.emplace_back("../images/watermelon.png"); // 09
-  foodImages.emplace_back("../images/bird.png");       // 10
+  foodImages.emplace_back("../images/apple.png");       // 10
   foodImages.emplace_back("../images/rooster.png");    // 11       
   foodImages.emplace_back("../images/duck.png");       // 12
   foodImages.emplace_back("../images/hare.png");       // 13 

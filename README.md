@@ -58,6 +58,14 @@ Below is the code structure of the SnakePeacock Capstone project that shows the 
 
 <img src="schema.svg"/>
 
+This SnakePeacock game built up on the [starter code](https://github.com/udacity/CppND-Capstone-Snake-Game) implements many features such as allowing the users to enter their names to store and display (high) scores, let the user choose their game environment such as to let the user just play a basic snake game, or let the user choose peacock as a moving obstacle, or play against another snake that is controlled by the computer or to have both peacock and another snake in the game.
+
+This new code structure of the completed project is inspired from the code structure below and carefully made changes such that the structure is intiutive and matching to the structure of the starter code as much as possible. This lets the mentor spot the new features and changes in the completed project comparing the code structure of the starter code.
+
+<img src="images.png">
+
+Below are the details of all the tasks implemented followed by the project rubric points addressed.
+
 ## Task 1
 
 #### Objective - Allow users to enter their names and save it in a text file with their scores, so that one can get the top score
