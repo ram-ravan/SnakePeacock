@@ -34,7 +34,7 @@ struct ScoreCard {
         ScoreCard();
         ~ScoreCard();
         void WriteScoreToFile(float score);
-        void PrintComputerScore(float score, bool playAlongComputer);
+        void PrintComputerScore(float score);
 
 };
 

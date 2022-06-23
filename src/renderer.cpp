@@ -53,11 +53,11 @@ void Renderer::Render(Snake const snake, SDL_Rect const &food, Peacock const pea
   SDL_RenderClear(sdl_renderer);
 
   // Render food
-  // RenderFood(food, snakeComp.placeFoodCount);
-  SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
-  block.x = food.x * block.w;
-  block.y = food.y * block.h;
-  SDL_RenderFillRect(sdl_renderer, &block);
+  RenderFood(food, snakeComp.placeFoodCount);
+  // SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
+  // block.x = food.x * block.w;
+  // block.y = food.y * block.h;
+  // SDL_RenderFillRect(sdl_renderer, &block);
 
   // Render snake's body
   SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0xAA, 0x00, 0xFF);

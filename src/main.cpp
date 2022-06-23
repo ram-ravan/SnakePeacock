@@ -22,16 +22,8 @@ int main() {
   // Task 5 - Let the user choose to play against another snake that is controlled by Computer
   int userEnvSetUp = UserEnvSetUp();
 
-  bool playAlongComputer = (userEnvSetUp == 1);
-  bool movingObstacle = (userEnvSetUp == 2);
-  bool setAll = (userEnvSetUp == 3);
-
-  if (setAll)
-  {
-    playAlongComputer = true;
-    movingObstacle = true;
-  }
-  
+  bool playAlongComputer = ((userEnvSetUp == 1 || userEnvSetUp == 3) && userEnvSetUp != 4);
+  bool movingObstacle = ((userEnvSetUp == 2 || userEnvSetUp == 3) && userEnvSetUp != 4);
 
   // Task 2 - Initialise instance of startSpeed to let the player choose an initial speed among slow, medium and fast
   startSpeed speed;
@@ -44,9 +36,11 @@ int main() {
   game.Run(controller, renderer, kMsPerFrame);
   std::cout << "Game has terminated successfully!\n";
   // std::cout << "Score: " << game.GetScore() << "\n";
+
   table.WriteScoreToFile(game.GetScore());
     if (playAlongComputer)
-    table.PrintComputerScore(game.GetScore1(), playAlongComputer);
+    table.PrintComputerScore(game.GetScore1());
+  
   return 0;
 }
 
@@ -60,10 +54,10 @@ int UserEnvSetUp()
     {
 
       if (count > 0)
-        std::cout << "Please reply a valid inputs!! type number 1, 2 or 3 based on below?" << std::endl;
-      std::cout << "Choose \t 1. Play against Computer or \nchoose \t 2. Have a peacock as a moving obstacle in the game? or \nchoose \t 3. Have both in the game" << std::endl;
+        std::cout << "Please reply a valid inputs!! type number 1, 2, 3 or 4 based on below?" << std::endl;
+      std::cout << "Choose \t 1. Play against Computer or \nchoose \t 2. Have a peacock as a moving obstacle in the game? or \nchoose \t 3. Have both in the game or \nchoose \t 4. Basic snake game" << std::endl;
       // getline(std::cin, user_input);
       count++;
-    } while (!(std::cin >> user_input) || user_input < 1 || user_input > 3);
+    } while (!(std::cin >> user_input) || user_input < 1 || user_input > 4);
     return static_cast<int>(user_input);
   }

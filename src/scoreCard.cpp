@@ -40,7 +40,6 @@ void ScoreCard::WriteScoreToFile(float score)
     ScoreCard::score = score;
     if (writeFile.is_open())
     {
-        // writeFile << playerName  + ":" + std::to_string(score) + " on:" + std::to_string(std::chrono::system_clock::now()) + "\n";
         writeFile << playerName  + ":" + std::to_string(score) + "\n";
         writeFile.close();
     }
@@ -120,8 +119,7 @@ ScoreCard::~ScoreCard()
     
 }
 
-void ScoreCard::PrintComputerScore(float score, bool playAlongComputer)
+void ScoreCard::PrintComputerScore(float score)
 {
-    if (playAlongComputer)
-        std::cout << "\n\t\t->->->->->->->->->->->->->->  Computer's score is " << score << " " << "!  <-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<\t\t\n" << std::endl;
+    std::cout << "\n\t\t->->->->->->->->->->->->->->  Computer's score is " << score << " " << "!  <-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<\t\t\n" << std::endl;
 }

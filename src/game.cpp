@@ -15,6 +15,10 @@ Game::Game(std::size_t grid_width, std::size_t grid_height, float startSpeed, bo
       playAlongComputer(playAlongComputer),
       movingObstacle(movingObstacle) {
   PlaceFood();
+  
+  //Task 4
+  food.w = 2;
+  food.h = 2;
 }
 
 void Game::Run(Controller const &controller, Renderer &renderer,
