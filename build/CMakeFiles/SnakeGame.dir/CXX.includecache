@@ -10,14 +10,6 @@
 snake.h
 /home/ram/cpp_portfolio/SnakePeacock++/src/snake.h
 
-/home/ram/cpp_portfolio/SnakePeacock++/src/game.cpp
-game.h
-/home/ram/cpp_portfolio/SnakePeacock++/src/game.h
-iostream
--
-SDL.h
-/home/ram/cpp_portfolio/SnakePeacock++/src/SDL.h
-
 /home/ram/cpp_portfolio/SnakePeacock++/src/game.h
 random
 -
@@ -41,6 +33,22 @@ peacock.h
 /home/ram/cpp_portfolio/SnakePeacock++/src/peacock.h
 snakeComp.h
 /home/ram/cpp_portfolio/SnakePeacock++/src/snakeComp.h
+
+/home/ram/cpp_portfolio/SnakePeacock++/src/main.cpp
+iostream
+-
+algorithm
+-
+controller.h
+/home/ram/cpp_portfolio/SnakePeacock++/src/controller.h
+game.h
+/home/ram/cpp_portfolio/SnakePeacock++/src/game.h
+renderer.h
+/home/ram/cpp_portfolio/SnakePeacock++/src/renderer.h
+scoreCard.h
+/home/ram/cpp_portfolio/SnakePeacock++/src/scoreCard.h
+startSpeed.h
+/home/ram/cpp_portfolio/SnakePeacock++/src/startSpeed.h
 
 /home/ram/cpp_portfolio/SnakePeacock++/src/peacock.h
 cstdlib
@@ -74,6 +82,14 @@ SDL_image.h
 snakeComp.h
 /home/ram/cpp_portfolio/SnakePeacock++/src/snakeComp.h
 
+/home/ram/cpp_portfolio/SnakePeacock++/src/scoreCard.h
+vector
+-
+string
+-
+utility
+-
+
 /home/ram/cpp_portfolio/SnakePeacock++/src/snake.h
 vector
 -
@@ -89,6 +105,8 @@ vector
 -
 SDL.h
 /home/ram/cpp_portfolio/SnakePeacock++/src/SDL.h
+
+/home/ram/cpp_portfolio/SnakePeacock++/src/startSpeed.h
 
 /usr/include/SDL2/SDL.h
 SDL_main.h

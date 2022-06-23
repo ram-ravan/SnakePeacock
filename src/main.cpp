@@ -36,7 +36,7 @@ int main() {
   game.Run(controller, renderer, kMsPerFrame);
   std::cout << "Game has terminated successfully!\n";
   // std::cout << "Score: " << game.GetScore() << "\n";
-  
+
   table.WriteScoreToFile(game.GetScore());
     if (playAlongComputer)
     table.PrintComputerScore(game.GetScore1());
@@ -48,17 +48,17 @@ int main() {
 int UserEnvSetUp()
   {
     std::cout << "How would you like to challenge yourself? Play against computer or have a moving obstacle?" << std::endl;
-    int user_input;
+    std::string user_input;
     bool bool_output;
     int count = 0;
     do
     {
-
       if (count > 0)
-        std::cout << "Please reply a valid inputs!! type number 1, 2, 3 or 4 based on below?" << std::endl;
-      std::cout << "Choose \t 1. Play against Computer or \nchoose \t 2. Have a peacock as a moving obstacle in the game? or \nchoose \t 3. Have both in the game or \nchoose \t 4. Basic snake game" << std::endl;
-      // getline(std::cin, user_input);
+        std::cout << "Please reply a valid inputs!! type number 1, 2, 3 or 4" << std::endl;
+      if (count == 0)
+        std::cout << "Choose \t 1. Play against Computer or \nchoose \t 2. Have a peacock as a moving obstacle in the game? or \nchoose \t 3. Have both in the game or \nchoose \t 4. Basic snake game" << std::endl;
+      getline(std::cin, user_input);
       count++;
-    } while (!(std::cin >> user_input) || user_input < 1 || user_input > 4);
-    return static_cast<int>(user_input);
+    } while (!(user_input == "1" || user_input == "2" || user_input == "3" || user_input == "4"));
+    return std::stoi(user_input);
   }

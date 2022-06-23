@@ -38,7 +38,7 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
   2. Allowed the user to select the initial speed (Slow - Fast)
   3. Added a peacock as a moving obstacle to the game
   4. Displayed More than one type of food in the game
-  5. Included another immortal snake to the game and allowed the computer to control it using **A* search algorithm**
+  5. Included another immortal snake to the game and allowed the computer to control it using **AStar search algorithm**
   6. User can choose between different game modes such as 
     1. Playing against a computer or 
     2. Play with peacock as a moving obstacle or 
