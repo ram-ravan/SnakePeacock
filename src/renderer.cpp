@@ -78,15 +78,11 @@ if (snakeComp.playAlongComputer)
   RenderSnakeComp(snakeComp);
 
   //Task 3
-  // std::future<void> ftr = std::async(std::launch::async, &Renderer::RenderPeacock, this, peacock);
-  // std::thread t(&Renderer::RenderPeacock, this, peacock);
 if (peacock.movingObstacle)
     RenderPeacock(peacock);
 
   // Update Screen
   SDL_RenderPresent(sdl_renderer);
-    // t.join();
-    // ftr.wait();
 }
 
 void Renderer::UpdateWindowTitle(float score, float score1, int fps, bool playAlongComputer) {
@@ -183,8 +179,8 @@ void Renderer::RenderFood(SDL_Rect const &food, int updateFood) {
 }
 
 void Renderer::InitFoodImages() {
-  foodImages.emplace_back("../images/rat.png");        // 01
-  foodImages.emplace_back("../images/frog.png");       // 02
+  foodImages.emplace_back("../images/frog.png");        // 01
+  foodImages.emplace_back("../images/rat.png");       // 02
   foodImages.emplace_back("../images/lizard.png");     // 03 
   foodImages.emplace_back("../images/insect.png");     // 04  
   foodImages.emplace_back("../images/spider.png");     // 05

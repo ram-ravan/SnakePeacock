@@ -2,7 +2,7 @@
 #include <algorithm>
 #include "startSpeed.h"
   
-startSpeed::startSpeed()
+StartSpeed::StartSpeed()
 {
     chooseSpeed:
     int count = 0;

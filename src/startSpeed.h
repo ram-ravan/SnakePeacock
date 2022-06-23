@@ -1,7 +1,7 @@
 #ifndef STARTSPEED_H
 #define STARTSPEED_H
 
-struct startSpeed
+struct StartSpeed
 {
     private:
 
@@ -9,7 +9,7 @@ struct startSpeed
     float startSpeedVal;
 
     public:
-    startSpeed();
+    StartSpeed();
     float getstartSpeedVal() const
     {
         return startSpeedVal;

@@ -26,7 +26,7 @@ int main() {
   bool movingObstacle = ((userEnvSetUp == 2 || userEnvSetUp == 3) && userEnvSetUp != 4);
 
   // Task 2 - Initialise instance of startSpeed to let the player choose an initial speed among slow, medium and fast
-  startSpeed speed;
+  StartSpeed speed;
 
   Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
   Controller controller;
