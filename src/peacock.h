@@ -33,13 +33,14 @@ Peacock(std::size_t grid_width, std::size_t grid_height, bool movingObstacle)
 
     bool PeacockCell(int, int);
     void Update(int seed, SDL_Rect food);
-    void SetPosition();
 
 private:
 
     std::size_t grid_width;
     std::size_t grid_height;
     float startSpeed;
+
+    void SetPosition();
 };
 
 #endif
