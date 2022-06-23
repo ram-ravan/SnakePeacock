@@ -47,6 +47,8 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
 
   New dependencies needed: SDL2_image (details in **Dependencies for Running Locally section** above)
 
+  Code started and worked for long in [this github repository](https://github.com/ram-ravan/CppND-Capstone-Snake-Game) and the final code submitted is available in [this github repository](https://github.com/ram-ravan/SnakePeacock)
+
   #### Note
    * Comments are added (with task numbers as listed above) to the code in important places so that different tasks can be identified easily
    * Apart from the major improvements and modificatins listed below for each task, there are other minor changes made to reflect the major changes that are not mentioned here
