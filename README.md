@@ -45,7 +45,7 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
     3. Have both in the game or 
     4. To play a basic snake game
 
-  New dependencies needed: SDL2_image (details in Dependencies for Running Locally section above)
+  New dependencies needed: SDL2_image (details in **Dependencies for Running Locally section** above)
 
   #### Note
    * Comments are added (with task numbers as listed above) to the code in important places so that different tasks can be identified easily
@@ -100,7 +100,7 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
 3. Renderer::RenderPeacock(...) method receives Peacock's instance from Renderer::Render() to render it to the screen as an image using SDL_RenderCopy(...)
 
 ###### User input(s) - None
-###### Expected output/behaviour - Now, a moving peacock image is rendered to the screen with the help of SDL_image library (instructions to SDL_image is in Dependencies for Running Locally section above)
+###### Expected output/behaviour - Now, a moving peacock image is rendered to the screen with the help of SDL_image library (instructions to SDL_image is in **Dependencies for Running Locally** section above)
 
 ###### Image location: Found in directory images in the same level as other project directories such as src, build etc.
 
@@ -117,7 +117,7 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
 4. A new method Renderer::RenderFood(...) was created to render the food images to the screen
 
 ###### User input(s) - None
-###### Expected output/behaviour - Many food images are listed as images using SDL_image library (instructions to SDL_image is in Dependencies for Running Locally section above)
+###### Expected output/behaviour - Many food images are listed as images using SDL_image library (instructions to SDL_image is in **Dependencies for Running Locally** section above)
 
 ###### Image location: Found in directory images in the same level as other project directories such as src, build etc.
 
