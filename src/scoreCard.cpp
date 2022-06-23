@@ -10,6 +10,7 @@ std::ofstream writeFile("./scoresInFloat.txt", std::ofstream::app);
 std::ifstream ReadFile;
 std::string line;
 
+// Prompts and receives player name from the user, then displays some messages about game before the game launches
 ScoreCard::ScoreCard()
     {   
         std::cout << "Enter player name: ";
@@ -27,7 +28,7 @@ ScoreCard::ScoreCard()
         char enter;
         do {enter = getchar();} while(enter != '\n');
         std::cout << "\t\t--------------------------------------------------------------------------------------------------\t\t" << std::endl;
-        std::cout << "Peacocks really like to eat snakes! Beware of peacock in the game!" << std::endl; // Task 3 
+        std::cout << "Peacocks really like to eat snakes! Beware of peacock in the game in case you choose to have it!" << std::endl; // Task 3 
         do {enter = getchar();} while(enter != '\n');
         std::cout << "Your score is stored only if you play until the game ends when snake dies. If you quit the game in the middle, your score is not stored..!" << std::endl;
         std::cout << "\t\t--------------------------------------------------------------------------------------------------\t\t" << std::endl;
@@ -66,17 +67,17 @@ void ScoreCard::ReadScoreFromFile()
         SortScores();
     }
 }
-
+// Sort all the scores retrived from the file in descending order
 void ScoreCard::SortScores()
 {
     std::sort(scoresTable.begin(), scoresTable.end(), [](std::pair <std::string, float> a, std::pair <std::string, float> b) { return a.second > b.second; });
 }
-
+// To get the high score from the list of scores stored in the file
 void ScoreCard::MaxScore()
 {
     maxScoredPlayer = scoresTable.front();
 }
-
+// Displays game stats
 ScoreCard::~ScoreCard()
 {
     MaxScore();
@@ -118,7 +119,7 @@ ScoreCard::~ScoreCard()
     std::cout << "\t\t--------------------------------------------------------------------------------------------------\t\t" << std::endl;
     
 }
-
+// When computer plays as an opponent, this method gets called that helps display the score gathered by the computer along with game stats
 void ScoreCard::PrintComputerScore(float score)
 {
     std::cout << "\n\t\t->->->->->->->->->->->->->->  Computer's score is " << score << " " << "!  <-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<\t\t\n" << std::endl;

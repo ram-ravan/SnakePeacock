@@ -131,6 +131,7 @@ void Renderer::RenderPeacock(Peacock const &peacock) {
 }
 
 // Task 5
+// Render Snake that is controlled by the computer
 void Renderer::RenderSnakeComp(SnakeComp const &snakeComp) {
   // Render snakeComp's body
   SDL_Rect renderSnakeComp;
@@ -170,7 +171,16 @@ void Renderer::RenderFood(SDL_Rect const &food, int updateFood) {
   // SDL_RenderFillRect(sdl_renderer, &sdl_food);
   InitFoodImages();
   IMG_Init(IMG_INIT_PNG);
-    imageIndex =  updateFood % foodImages.size();
+  int count = 0;
+  if (updateFood > 3) {
+    int max = foodImages.size();
+    int min = 3;
+    imageIndex = (updateFood % foodImages.size()) + 3;
+    count++;
+  }
+  else {
+    imageIndex =  updateFood % 3;
+  }
   
   // surface_food = IMG_Load(foodImages[7]);
   surface_food = IMG_Load(foodImages[imageIndex]);

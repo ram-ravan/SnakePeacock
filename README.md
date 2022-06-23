@@ -64,7 +64,7 @@ This new code structure of the completed project is inspired from the code struc
 
 <img src="images.png">
 
-Below are the details of all the tasks implemented followed by the project rubric points addressed.
+Below are the details of all the tasks implemented followed by the [project rubric points](https://review.udacity.com/#!/rubrics/2533/view) addressed.
 
 ## Task 1
 

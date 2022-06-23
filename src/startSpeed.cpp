@@ -1,7 +1,8 @@
 #include <iostream>
 #include <algorithm>
 #include "startSpeed.h"
-  
+
+// This constructor implements a feature that lets the user choose the start speed while beginning the game
 StartSpeed::StartSpeed()
 {
     chooseSpeed:

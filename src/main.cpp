@@ -16,7 +16,7 @@ int main() {
   constexpr std::size_t kGridWidth{32};
   constexpr std::size_t kGridHeight{32};
 
-  // Task 1 - Initialise instance of scoreCard, in order to create a Score Card for the game
+  // Task 1 - Initialise instance of scoreCard, in order to create a Score Card for the game by invoking the default constructor ScoreCard::ScoreCard()
   ScoreCard table;
 
   // Task 6 - Let the user choose between playing against a computer or with peacock as a moving obstacle or have both in the game or to play a basic snake game
@@ -25,7 +25,7 @@ int main() {
   bool playAlongComputer = ((userEnvSetUp == 1 || userEnvSetUp == 3) && userEnvSetUp != 4);
   bool movingObstacle = ((userEnvSetUp == 2 || userEnvSetUp == 3) && userEnvSetUp != 4);
 
-  // Task 2 - Initialise instance of startSpeed to let the player choose an initial speed among slow, medium and fast
+  // Task 2 - Initialise instance of startSpeed to let the player choose an initial speed among slow, medium and fast by invoking the default constructor StartSpeed::StartSpeed()
   StartSpeed speed;
 
   Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
@@ -39,12 +39,13 @@ int main() {
 
   table.WriteScoreToFile(game.GetScore());
     if (playAlongComputer)
-    table.PrintComputerScore(game.GetScore1());
+    table.PrintComputerScore(game.GetScore1()); // When computer plays as an opponent, this method gets called that helps display the score gathered by the computer 
+                                                // along with game stats
   
   return 0;
 }
 
-// Task 6
+// Task 6 - Let the user choose between playing against a computer or with peacock as a moving obstacle or have both in the game or to play a basic snake game
 int UserEnvSetUp()
   {
     std::cout << "How would you like to challenge yourself? Play against computer or have a moving obstacle?" << std::endl;

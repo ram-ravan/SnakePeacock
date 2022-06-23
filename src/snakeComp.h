@@ -15,6 +15,7 @@ public:
 
   enum class Directions { kUp, kDown, kLeft, kRight };
 
+  // This parameterised constructor sets the initial location of the snakeComp when the game begins   
   SnakeComp(std::size_t grid_width, std::size_t grid_height, float startSpeed, bool playAlongComputer) 
   : grid_width(grid_width),
   grid_height(grid_height),

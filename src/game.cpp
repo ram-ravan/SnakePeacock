@@ -37,7 +37,8 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     controller.HandleInput(running, snake);
     futures.emplace_back(std::async(std::launch::async, &Game::UpdateSnake, this));
     renderer.Render(snake, food, peacock, snakeComp);
-
+    
+    // Task 5
     if (playAlongComputer)
       futures.emplace_back(std::async(std::launch::async, &Game::UpdateSnakeComp, this));
 
@@ -127,6 +128,8 @@ void Game::UpdateSnake() {
  }
 }
 
+// Task 5 This method updates movements and behaviour of the snake that is controlled by the computer
+// This method also triggers AStar search algorithm to navigate the snake to the food
 void Game::UpdateSnakeComp() {
   if (!snakeComp.s_alive) return;
 
@@ -152,6 +155,8 @@ void Game::UpdateSnakeComp() {
   }
 }
 
+// Task 4
+// Given co-ordinates x and y, this method returns true if the co-ordinate is referring to the current placed location of the food
 bool Game::FoodCell(int x, int y) {
   return ((food.x == x && food.y == y) || (food.x == x && food.y + 1 == y) || (food.x + 1 == x && food.y == y)
   || (food.x + 1 == x && food.y + 1 == y)); 

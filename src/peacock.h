@@ -11,6 +11,7 @@ class Peacock
 {
 public:
 
+// Parameterised constructor sets the inital position and also the size of the peacock in the game
 Peacock(std::size_t grid_width, std::size_t grid_height, bool movingObstacle)
 : grid_width(grid_width),
   grid_height(grid_height),

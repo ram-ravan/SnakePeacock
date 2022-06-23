@@ -9,6 +9,7 @@ void Peacock::SetPosition()
   rect_peacock.y = rand() % 25;
 }
 
+// Given co-ordinates x and y, this method returns true if the co-ordinate is referring to the current placed location of peacock
 bool Peacock::PeacockCell(int x, int y)
 {
     bool is_peacockOnFood_x = ((x >= rect_peacock.x) && (x <= rect_peacock.x + rect_peacock.w));
@@ -18,6 +19,7 @@ bool Peacock::PeacockCell(int x, int y)
     return false;
     }
 
+// This method updates peacock location, once in a second when its called from Game::Run(...)
 void Peacock::Update(int seed, SDL_Rect food) // later change to SDL_Rect
 {
   //Generate random numbers between -1 to +1
