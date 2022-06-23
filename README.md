@@ -63,7 +63,7 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
 2. In the main(), an object of type scoreCard is created to invoke the constructor of Struct scoreCard
 3. Read/Write to file operations are implemented to sort score and display top scores etc.
 
-###### User input(s) - player name
+###### User input(s) - Player name
 ###### Expected output/behaviour - User gets instructions and enters the name in command line on executing ./SnakeGame in the build directory
 
 ## Task 2
@@ -123,7 +123,7 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
 
 ## Task 5
 
-#### Objective - Included another immortal snake to the game and allowed the computer to control it using **A* search algorithm**
+#### Objective - Included another immortal snake to the game and allowed the computer to control it using **AStar search algorithm**
 
 #### C++ Concepts involved - - Object Oriented Programming, Concurrency
 
@@ -159,10 +159,10 @@ This project builds upon the startup code of [Snake game](https://github.com/uda
 3. Modifications to code in one or more methods of class Game and class Renderer are made to adopt to this game feature
 
 ###### User input(s) - User's desired choice of game environments whether to 
-  1. Play against computer or
-  2. To play with a moving obstacle or
-  3. Have both in the game or
-  4. To play a basic snake game
+ ###### 1. Play against computer or
+ ###### 2. To play with a moving obstacle or
+ ###### 3. Have both in the game or
+ ###### 4. To play a basic snake game
 ###### Expected output/behaviour - User prompted with different options of possible game environments as listed above
 
 
