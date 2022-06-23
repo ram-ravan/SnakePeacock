@@ -106,6 +106,14 @@ vector
 SDL.h
 /home/ram/cpp_portfolio/SnakePeacock++/src/SDL.h
 
+/home/ram/cpp_portfolio/SnakePeacock++/src/startSpeed.cpp
+iostream
+-
+algorithm
+-
+startSpeed.h
+/home/ram/cpp_portfolio/SnakePeacock++/src/startSpeed.h
+
 /home/ram/cpp_portfolio/SnakePeacock++/src/startSpeed.h
 
 /usr/include/SDL2/SDL.h

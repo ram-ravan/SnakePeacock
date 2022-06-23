@@ -5,7 +5,7 @@ struct startSpeed
 {
     private:
 
-    char speed;
+    std::string speed;
     float startSpeedVal;
 
     public:
@@ -14,7 +14,7 @@ struct startSpeed
     {
         return startSpeedVal;
     }
-    char getSpeed() const
+    std::string getSpeed() const
     {
         return speed;
     }

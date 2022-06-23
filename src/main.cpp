@@ -54,7 +54,7 @@ int UserEnvSetUp()
     do
     {
       if (count > 0)
-        std::cout << "Please reply a valid inputs!! type number 1, 2, 3 or 4" << std::endl;
+        std::cout << "Please reply a valid inputs!! type number 1, 2, 3 or 4 from above choices shown" << std::endl;
       if (count == 0)
         std::cout << "Choose \t 1. Play against Computer or \nchoose \t 2. Have a peacock as a moving obstacle in the game? or \nchoose \t 3. Have both in the game or \nchoose \t 4. Basic snake game" << std::endl;
       getline(std::cin, user_input);
